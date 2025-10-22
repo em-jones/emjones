@@ -1,0 +1,20 @@
+{
+  "name": "find-a-job",
+  "version": "0.0.1",
+  "description": "A monorepo to help me find a job",
+  "homepage": "https://github.com/em-jones/find-a-job#readme",
+  "bugs": {
+    "url": "https://github.com/em-jones/find-a-job/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/em-jones/find-a-job.git"
+  },
+  "license": "ISC",
+  "author": "Em Jones",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
