@@ -28,13 +28,12 @@
   ],
   "env": {
     "UV_TOOL_DIR": "$VENV_DIR",
-    "PATH":        "$PATH:$VENV_DIR/specify-cli/bin"
+    "PATH": "$PATH:$VENV_DIR/specify-cli/bin"
   },
   "shell": {
     "init_hook": [
-      "alias dc='teller run -s -- devcontainer up --workspace-folder .'",
-      ". $VENV_DIR/bin/activate.fish",
-      "uv tool install specify-cli --from git+https://github.com/github/spec-kit.git --force"
+      "./init.sh",
+      "env | grep -q \"fish\" && . $VENV_DIR/bin/activate.fish || . $VENV_DIR/bin/activate"
     ],
     "scripts": {
       "test": [

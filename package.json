@@ -12,9 +12,20 @@
   },
   "license": "ISC",
   "author": "Em Jones",
-  "type": "commonjs",
-  "main": "index.js",
+  "packageManager": "pnpm@10.18.3",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:docs": "remark . --frail --output --quiet"
+  },
+  "directories": {
+    "docs": "docs"
+  },
+  "devDependencies": {
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-markdownlint": "^0.9.0",
+    "remark-cli": "^12.0.1",
+    "remark-preset-lint-consistent": "^6.0.1",
+    "remark-preset-lint-recommended": "^7.0.1"
   }
 }
