@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import '@webtui/css/base.css';
+@import '@webtui/css/components/button.css';
+@import '@webtui/css/components/badge.css';
+@import '@webtui/css/components/typography.css';
+@import '@webtui/theme-nord';
+@import '@webtui/css/utils/box.css';
+@import '@webtui/css/components/view.css';
+@import '@webtui/css/components/input.css';
+@import '@webtui/css/components/spinner.css';
+
+.bg-primary {
+  background-color: var(--background0);
+}
+
+.text-primary {
+  color: var(--foreground0);
+}
+
+.text-secondary {
+  color: var(--nord7);
+}
+
+.text-accent {
+  color: var(--nord4);
+}
+
+.command-name {
+  color: var(--nord9);
+  text-shadow: 0 0 5px var(--nord10);
+}
+
+.ascii-art {
+  color: var(--nord8);
+}
+
+h1 {
+  color: var(--nord10);
+  @apply text-2xl underline;
+}
+
+h2 {
+  color: var(--nord9);
+  @apply text-2xl;
+}
+
+h3 {
+  color: var(--nord8);
+
+  @apply text-2xl;
+}
+
+h4 {
+  color: var(--nord7);
+  @apply text-xl;
+}
+
+h5 {
+  color: var(--nord6);
+  @apply text-lg;
+}
+
+h6 {
+  color: var(--nord5);
+
+}
+
+p {
+  @apply text-sm;
+  ;
+}

@@ -1,0 +1,1 @@
+import{D as e}from"./DeepView-Ewf2Hv7l.js";import{z as o,c as r}from"./main-DRjRsx0o.js";function p(){const t=o.useLoaderData();return r(e,{get title(){return t().title},backPath:"/projects",get html(){return t().html}})}export{p as component};
