@@ -1,0 +1,1 @@
+import{g as e,t}from"./main-BI8EiWVU.js";var r=t('<div>Select a user or <a href=/api/users class="text-blue-800 hover:text-blue-600 underline">view as JSON');function s(){return e(r)}export{s as component};

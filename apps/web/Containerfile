@@ -1,0 +1,49 @@
+# use the official Bun image
+# see all versions at https://hub.docker.com/r/oven/bun/tags
+FROM oven/bun:1.3-slim AS base
+ENV HUSKY 0
+WORKDIR /usr/src/app
+
+# install dependencies into temp directory
+# this will cache them and speed up future builds
+FROM base AS install
+WORKDIR /temp/dev
+COPY ./package.json ./bun.lock /temp/dev/
+COPY ./apps/web/package.json ./apps/web/package.json
+COPY ./packages ./packages
+RUN bun install --frozen-lockfile
+
+# install with --production (exclude devDependencies)
+FROM base AS install-prod
+WORKDIR /temp/prod
+COPY package.json bun.lock /temp/prod/
+COPY ./apps/web/package.json ./apps/web/package.json
+COPY ./packages/ ./packages
+RUN  bun install --production
+
+# copy node_modules from temp directory
+# then copy all (non-ignored) project files into the image
+FROM base AS prerelease
+WORKDIR /usr/src/app
+COPY --from=install /temp/dev/node_modules node_modules
+COPY ./package.json ./bun.lock /usr/src/app/
+COPY ./apps/web ./apps/web
+COPY ./packages/ ./packages/
+COPY ./.content/ ./.content
+
+# [optional] tests & build
+ENV NODE_ENV=production
+# RUN bun test
+RUN cd apps/web && bun run build
+
+# copy production dependencies and source code into final image
+FROM base AS release
+COPY --from=install-prod /temp/prod/node_modules node_modules
+COPY --from=prerelease /usr/src/app/apps/web/.output /usr/src/app
+COPY --from=prerelease /usr/src/app/apps/web/.content-collections /usr/src/app/.content-collections
+
+
+# run the app
+USER bun
+EXPOSE 3000/tcp
+ENTRYPOINT [ "bun", "server/index.mjs" ]

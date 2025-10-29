@@ -1,0 +1,1 @@
+import{g as o,t as s,i as l,c as n,O as r}from"./main-BI8EiWVU.js";var i=s("<div class=p-2><div class=border-b>I'm a layout</div><div>");const p=()=>(()=>{var t=o(i),e=t.firstChild,a=e.nextSibling;return l(a,n(r,{})),t})();export{p as component};

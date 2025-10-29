@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@import '@webtui/css/base.css';
+@import '@webtui/css/components/button.css';
+@import '@webtui/css/components/badge.css';
+@import '@webtui/css/components/typography.css';
+@import '@webtui/theme-nord';
+@import '@webtui/css/utils/box.css';
+@import '@webtui/css/components/view.css';
+@import '@webtui/css/components/input.css';
+@import '@webtui/css/components/spinner.css';
+@import '@webtui/plugin-nf';
+@import "@fontsource/comic-mono";
+@plugin "@iconify/tailwind4";
+
+
+
+@layer base {
+  :root {
+    --font-family: 'Comic Mono', Menlo, Monaco, monospace, "Symbols Nerd Font";
+    --font-sans: 'Comic Mono', Menlo, Monaco, monospace, "Symbols Nerd Font";
+    --font-mono: 'Comic Mono', Menlo, Monaco, monospace, "Symbols Nerd Font";
+  }
+}
+@font-face {
+  font-family: 'Comic Mono';
+  src: url('/comic-mono-latin-700-normal.woff2') format('woff2'),
+       url('/comic-mono-latin-700-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body:not([data-page="home"]) #main-subtitle,
+body:not([data-page="home"]) #social-icons
+{
+  display: none;
+
+}
+
+main::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background0);
+  color: var(--foreground0);
+}
+
+.bg-primary {
+  background-color: var(--background0);
+}
+
+.text-primary {
+  color: var(--foreground0);
+}
+
+.text-secondary {
+  color: var(--nord7);
+}
+
+.text-accent {
+  color: var(--nord4);
+}
+
+.command-name {
+  color: var(--nord9);
+  text-shadow: 0 0 5px var(--nord10);
+}
+
+.ascii-art {
+  color: var(--nord8);
+}
+
+h1 {
+  color: var(--nord10);
+  @apply text-2xl underline;
+}
+
+h2 {
+  color: var(--nord9);
+  @apply text-2xl;
+}
+
+h3 {
+  color: var(--nord8);
+
+  @apply text-2xl;
+}
+
+h4 {
+  color: var(--nord7);
+  @apply text-xl;
+}
+
+h5 {
+  color: var(--nord6);
+  @apply text-lg;
+}
+
+h6 {
+  color: var(--nord5);
+
+}
+
+p {
+  @apply text-sm;
+}
+
+details summary {
+  list-style-type: ' ';
+}
+
+li.nav::before {
+  content: " "
+}
