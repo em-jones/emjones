@@ -12,7 +12,6 @@
   },
   "license": "ISC",
   "author": "Em Jones",
-  "packageManager": "pnpm@10.18.3",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format:docs": "remark . --frail --output --quiet"
@@ -20,10 +19,14 @@
   "directories": {
     "docs": "docs"
   },
+  "workspaces": ["apps/*", "packages/*"],
   "devDependencies": {
+    "@bytecodealliance/jco": "^1.15.3",
+    "@nx/workspace": "^22.0.2",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-markdownlint": "^0.9.0",
+    "nx": "22.0.2",
     "remark-cli": "^12.0.1",
     "remark-preset-lint-consistent": "^6.0.1",
     "remark-preset-lint-recommended": "^7.0.1"
