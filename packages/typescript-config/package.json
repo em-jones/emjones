@@ -1,0 +1,12 @@
+{
+  "name": "@em-jones/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@tsconfig/strictest": "^2.0.6"
+  }
+}

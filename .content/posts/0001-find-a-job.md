@@ -1,6 +1,27 @@
-# Building a proper portfolio
+---
+title: Find a Job
+published_at: 2025-01-01
+description: >
+  Building a proper portfolio to showcase skills and streamline the job search
+  process.
+summary: >
+  This document outlines a strategy for building a comprehensive portfolio that
+  demonstrates key software development skills while also automating the job
+  search process. The goal is to create a robust platform showcasing expertise
+  in CI/CD, Infrastructure as Code, and developer experience, while also
+  leveraging AI tools to enhance productivity and streamline job hunting tasks.
+tags:
+  - job-hunting
+  - portfolio
+  - automation
+  - software-delivery
+  - ci-cd
+  - infrastructure-as-code
+---
 
-## Introduction
+## Building a proper portfolio
+
+### Introduction
 
 Job hunting as a software professional can become overwhelming. Between finding
 roles where a candidate may find alignment, tracking applications, researching
@@ -13,9 +34,9 @@ skills that don't have a proper outlet for demonstration.
 This series will focus on building a proper portfolio that showcases the skills
 required.
 
-## Goals
+### Goals
 
-### Digitally assisted development tooling
+#### Digitally assisted development tooling
 
 Where practical, AI technologies enhance development productivity.
 
@@ -24,7 +45,7 @@ Tools to Explore:
 - [Spec-kit](https://github.com/github/spec-kit)
 - [Claude Code Project Management](https://github.com/automazeio/ccpm)
 
-### Skills demonstration
+#### Skills demonstration
 
 - Delivery Automation Expertise: Showcase ability to design and implement robust
   CI/CD pipelines using `GitOps` best practices
@@ -37,7 +58,7 @@ Tools to Explore:
 - Open Source Contribution: Build and contribute to open source projects that
   solve real-world problems
 
-### Finding the right job
+#### Finding the right job
 
 Using automation to streamline the job search process itself:
 
@@ -47,9 +68,9 @@ Using automation to streamline the job search process itself:
 - Cover Letter and Resume Customization: Use AI to tailor application materials
   for specific roles and companies.
 
-## Solution
+### Solution
 
-### 1. Open source software delivery platform
+#### 1. Open source software delivery platform
 
 A comprehensive platform that automates the entire software delivery lifecycle.
 It will include features such as:
@@ -60,7 +81,7 @@ It will include features such as:
 - Monitoring and alerting systems
 - Extensibility model for cloud-agnosticism
 
-### 2. A job seeking automation toolkit
+#### 2. A job seeking automation toolkit
 
 - Job Requisition Tracker: A tool to automate collection of job postings from
   leading platforms and track application statuses.

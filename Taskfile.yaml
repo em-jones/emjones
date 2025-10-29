@@ -3,3 +3,16 @@ tasks:
   dc:
     cmds:
       - teller run -s -- devcontainer up --workspace-folder .
+  nx:run:*:*:
+    desc: "Run an nx target for a given project. Usage: task nx:run:<project>:<target>"
+    vars:
+      PROJECT: "{{ index .MATCH 0 }}"
+      TARGET: "{{ index .MATCH 1 }}"
+    cmds:
+      - bun nx run {{.PROJECT}}:{{.TARGET}}
+  deploy:*:
+    desc: "Deploy a given project. Usage: task deploy:<project>"
+    vars:
+      PROJECT: "{{ index .MATCH 0 }}"
+    cmds:
+      - fly deploy --config=./.ops/fly.{{.PROJECT}}.toml

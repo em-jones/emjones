@@ -1,0 +1,87 @@
+{
+  "name": "@em-jones/ui",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Components for building the task management uis",
+  "keywords": [
+    "solid",
+    "solidjs",
+    "ui",
+    "library",
+    "design-system",
+    "components",
+    "headless",
+    "unstyled",
+    "aria"
+  ],
+  "homepage": "https://github.com/kobaltedev/kobalte/tree/main/packages/core#readme",
+  "bugs": {
+    "url": "https://github.com/kobaltedev/kobalte/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kobaltedev/kobalte.git"
+  },
+  "license": "MIT",
+  "author": "jer3m01 <jer3m01@jer3m01.com>",
+  "contributors": [
+    "Fabien Marie-Louise <fabienml.dev@gmail.com>"
+  ],
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./styles.css": "./shared-styles.css",
+    "./postcss": "./postcss.config.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "NOTICE.txt"
+  ],
+  "scripts": {
+    "build": "bun run typecheck && bun build src/index.tsx",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm NOTICE.txt",
+    "dev": "vite serve dev --host",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ark-ui/solid": "^5.26.2",
+    "@floating-ui/dom": "^1.5.1",
+    "@fontsource/comic-mono": "^5.2.5",
+    "@internationalized/date": "^3.4.0",
+    "@internationalized/number": "^3.2.1",
+    "@solid-primitives/props": "^3.1.8",
+    "@solid-primitives/refs": "^1.1.2",
+    "@solid-primitives/resize-observer": "^2.0.26",
+    "@tailwindplus/elements": "^1.0.18",
+    "@webtui/plugin-nf": "^0.1.1",
+    "@webtui/theme-nord": "^0.0.2",
+    "@xterm/xterm": "^5.5.0",
+    "solid-presence": "^0.1.8",
+    "solid-prevent-scroll": "^0.1.4"
+  },
+  "peerDependencies": {
+    "@tailwindplus/elements": "^1.0.18",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@webtui/css": "^0.1.5",
+    "@xterm/xterm": "^5.5.0",
+    "solid-js": "^1.8.15"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@em-jones/typescript-config": "workspace:*",
+    "@iconify/json": "^2.2.410",
+    "@iconify/tailwind4": "^1.1.1",
+    "@solidjs/testing-library": "^0.8.10",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/bun": "^1.2.23",
+    "@webtui/css": "^0.1.5",
+    "bun": "^1.2.23",
+    "tailwindcss": "^4.1.16",
+    "vitest": "^3.2.4"
+  }
+}

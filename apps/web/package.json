@@ -1,0 +1,49 @@
+{
+  "name": "@em-jones/web",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && tsc --noEmit",
+    "start": "vite start"
+  },
+  "dependencies": {
+    "@em-jones/types": "workspace:*",
+    "@em-jones/ui": "workspace:*",
+    "@fontsource/comic-mono": "^5.2.5",
+    "@statelyai/inspect": "^0.4.0",
+    "@tailwindplus/elements": "^1.0.19",
+    "@tanstack/nitro-v2-vite-plugin": "^1.133.19",
+    "@tanstack/solid-db": "^0.1.46",
+    "@tanstack/solid-router": "^1.136.17",
+    "@tanstack/solid-router-devtools": "^1.136.17",
+    "@tanstack/solid-start": "^1.138.0",
+    "@webtui/css": "^0.1.5",
+    "@webtui/plugin-nf": "^0.1.1",
+    "effect": "^3.19.5",
+    "highlight.js": "^11.11.1",
+    "hotkeys-js": "^4.0.0-beta.6",
+    "redaxios": "^0.5.1",
+    "solid-js": "^1.9.10",
+    "tailwind-merge": "^2.6.0",
+    "typeit": "^8.8.7",
+    "xstate": "^5.24.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@content-collections/core": "^0.11.1",
+    "@content-collections/markdown": "^0.1.4",
+    "@content-collections/vite": "^0.2.7",
+    "@em-jones/eslint-config": "workspace:*",
+    "@playwright/test": "^1.56.1",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@types/node": "^22.19.1",
+    "postcss": "^8.5.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-solid": "^2.11.10",
+    "vite-plugin-wasm": "^3.5.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

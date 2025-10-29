@@ -24,11 +24,12 @@
     "nodePackages_latest.aws-cdk@latest",
     "kustomize@latest",
     "kubectl@latest",
-    "k9s@latest"
+    "k9s@latest",
+    "pnpm@latest"
   ],
   "env": {
     "UV_TOOL_DIR": "$VENV_DIR",
-    "PATH": "$PATH:$VENV_DIR/specify-cli/bin"
+    "PATH":        "$PATH:$VENV_DIR/specify-cli/bin"
   },
   "shell": {
     "init_hook": [
