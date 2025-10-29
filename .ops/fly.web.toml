@@ -1,0 +1,13 @@
+app = "emjones"
+
+primary_region = "den"
+
+[http_service]
+auto_start_machines = true
+auto_stop_machines = true
+force_https = true
+internal_port = 3000
+min_machines_running = 0
+
+[build]
+  dockerfile = "../apps/web/Containerfile"
