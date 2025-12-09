@@ -59,6 +59,7 @@ jobs:
         with:
           INSERT_ISSUE_URLS: 'true' # Insert created issue URLs back into the TODO comments
           CLOSE_ISSUES: 'true' # Close issues when TODOs are removed - default: false
+
       - name: Set Git user
         run: |
           git config --global user.name "github-actions[bot]"
@@ -76,12 +77,17 @@ jobs:
 
 1. Ensure the presence of TODO comments in my codebase, like:
 
-   ```ts
-   /* TODO: This is my example todo
-        Using the GitHub Action, this will be converted into a GitHub Issue
-        milestone: complete
-        labels: no-op
-   
-    */
-   const doEverythingAndRecordWhatCantBeDoneYet = () => {};
-   ```
+<!-- TODO: This is my example todo
+      Using the GitHub Action, this will be converted into a GitHub Issue
+      milestone: complete
+      labels: no-op -->
+
+```ts
+/* TODO: This is my example todo
+     Using the GitHub Action, this will be converted into a GitHub Issue
+     milestone: complete
+     labels: no-op
+
+ */
+const doEverythingAndRecordWhatCantBeDoneYet = () => {};
+```
