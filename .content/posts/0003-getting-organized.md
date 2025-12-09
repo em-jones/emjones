@@ -78,6 +78,7 @@ jobs:
 1. Ensure the presence of TODO comments in my codebase, like:
 
 <!-- TODO: This is my example todo
+Issue URL: https://github.com/em-jones/emjones/issues/7
       Using the GitHub Action, this will be converted into a GitHub Issue
       milestone: complete
       labels: no-op -->
