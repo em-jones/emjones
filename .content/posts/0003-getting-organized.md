@@ -37,6 +37,7 @@ Here's an example of how to set up the GitHub Action to convert TODO comments:
 
 <!--
 TODO: Add code importing to content rendering
+Issue URL: https://github.com/em-jones/emjones/issues/2
  milestone: v1.0.0
  labels: cms, remark
 -->
